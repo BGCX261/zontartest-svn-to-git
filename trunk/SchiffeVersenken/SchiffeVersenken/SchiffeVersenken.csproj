@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{709D91AB-4F8C-4EDE-9BD0-250916158E10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchiffeVersenken</RootNamespace>
+    <AssemblyName>SchiffeVersenken</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klassen\Feld.cs" />
+    <Compile Include="Klassen\FeldGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Klassen\FeldGUI.Designer.cs">
+      <DependentUpon>FeldGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klassen\NeuesSchiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klassen\NeuesSchiff.Designer.cs">
+      <DependentUpon>NeuesSchiff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klassen\Schiff.cs" />
+    <Compile Include="Klassen\Schiffelement.cs" />
+    <Compile Include="Klassen\Schussergebnis.cs" />
+    <Compile Include="Klassen\Spiel.cs" />
+    <Compile Include="Klassen\Spieler.cs" />
+    <Compile Include="Klassen\SpielerDu.cs" />
+    <Compile Include="Klassen\SpielerIch.cs" />
+    <Compile Include="Klassen\Spielfeld.cs" />
+    <Compile Include="Klassen\SpielGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Klassen\SpielGUI.Designer.cs">
+      <DependentUpon>SpielGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klassen\Spielprotokoll.cs" />
+    <Compile Include="Klassen\Spielzug.cs" />
+    <Compile Include="Klassen\SpielzugAnwort.cs" />
+    <Compile Include="Klassen\Zerstoerer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klassen\FeldGUI.resx">
+      <DependentUpon>FeldGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klassen\NeuesSchiff.resx">
+      <DependentUpon>NeuesSchiff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klassen\SpielGUI.resx">
+      <DependentUpon>SpielGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
